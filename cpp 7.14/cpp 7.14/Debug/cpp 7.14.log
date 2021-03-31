@@ -1,0 +1,3 @@
+﻿  assert.cpp
+C:\Users\youn7\computer science\cpp\cpp 7.14\cpp 7.14\assert.cpp(12,2): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+  cpp 7.14.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 7.14\Debug\cpp 7.14.exe

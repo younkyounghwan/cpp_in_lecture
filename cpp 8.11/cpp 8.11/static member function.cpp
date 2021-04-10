@@ -12,6 +12,7 @@ public:
 	{
 		return s_value;
 	}
+
 };
 
 int Something::s_value = 1024;

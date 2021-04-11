@@ -21,6 +21,8 @@ private:
 
 	static _init s_initailizer;
 
+public:
+
 
 	Something()
 		:m_value(123) //, s_value(1024) // static member variable은 생성자에서 초기화 할 수 없다.  static constructor를 생성할 수 없는거다.

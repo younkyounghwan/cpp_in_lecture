@@ -1,2 +1,19 @@
 ﻿  static member function.cpp
-  cpp 8.11.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 8.11\Debug\cpp 8.11.exe
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(45,30): error C2248: 'Something::getValue': private 멤버('Something' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(28): message : 'Something::getValue' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(5): message : 'Something' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(48,14): error C2248: 'Something::Something': private 멤버('Something' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(25): message : 'Something::Something' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(5): message : 'Something' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(48,18): error C2248: 'Something::Something': private 멤버('Something' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(25): message : 'Something::Something' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(5): message : 'Something' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(49,22): error C2248: 'Something::getValue': private 멤버('Something' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(28): message : 'Something::getValue' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(5): message : 'Something' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(54,5): error C2248: 'Something::temp': private 멤버('Something' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(34): message : 'Something::temp' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(5): message : 'Something' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(58,5): error C2248: 'Something::getValue': private 멤버('Something' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(28): message : 'Something::getValue' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 8.11\cpp 8.11\static member function.cpp(5): message : 'Something' 선언을 참조하십시오.

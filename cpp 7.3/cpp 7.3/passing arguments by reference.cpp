@@ -1,3 +1,5 @@
+// 참조에 의한 주소 전달
+
 #include <iostream>
 #include <cmath>  
 using namespace std;
@@ -28,7 +30,7 @@ void printElement(int (&arr)[4])//웬만하면 vector를 사용
 
 }
 
-int main()
+int main() 
 {	
 	
 

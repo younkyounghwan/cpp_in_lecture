@@ -7,6 +7,7 @@ class Monster
 private:
 	std::string m_name; //char * data, unsigned length
 	Position2D m_location;
+
 	//int m_x; //location
 	//int m_y;
 
@@ -22,7 +23,10 @@ public:
 		//m_y = y_target;
 	}
 
-
-
+	friend std::ostream& operator << (std::ostream& out, const Monster & monster)
+	{
+		out << monster.m_name << " " << monster.m_location;
+		return out;
+	}
 
 };

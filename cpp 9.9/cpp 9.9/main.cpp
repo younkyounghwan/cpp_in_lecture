@@ -1,3 +1,5 @@
+//RVO (return value optimization)
+
 #include <iostream>
 #include <cassert>
 

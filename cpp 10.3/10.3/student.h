@@ -18,14 +18,17 @@ public:
 		m_name = name_in;
 
 	}
-	int getIntel()
-	{
-		return m_intel;
-	}
+
 	void setIntel(int intel_in)
 	{
 		m_intel = intel_in;
 	}
+
+	int getIntel()
+	{
+		return m_intel;
+	}
+
 
 	friend std::ostream& operator << (std::ostream& out, const Student& student)
 	{

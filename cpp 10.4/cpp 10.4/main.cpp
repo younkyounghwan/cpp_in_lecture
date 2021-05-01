@@ -7,7 +7,7 @@ class Patient
 {
 private:
 	string m_name;
-	/*vector<Doctor*> m_doctors;*/
+	vector<Doctor*> m_doctors;
 
 public:
 	Patient(string name_in)

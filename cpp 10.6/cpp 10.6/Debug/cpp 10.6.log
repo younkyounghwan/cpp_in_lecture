@@ -1,0 +1,3 @@
+﻿  소스.cpp
+C:\Users\youn7\computer science\cpp\cpp 10.6\cpp 10.6\소스.cpp(43,22): warning C4101: 'int_arr' :참조되지 않은 지역 변수입니다.
+  cpp 10.6.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 10.6\Debug\cpp 10.6.exe

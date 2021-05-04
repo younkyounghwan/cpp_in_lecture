@@ -9,6 +9,7 @@ class IntArray
 private:
 	int m_length = 0;
 	int* data = nullptr;
+	
 
 public:
 	IntArray(int &length_in)
@@ -31,8 +32,6 @@ public:
 		m_length = 0;
 		data = nullptr;
 	}
-
-
 
 
 };

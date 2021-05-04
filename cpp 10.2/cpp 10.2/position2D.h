@@ -32,4 +32,10 @@ public:
 		out << pos2d.m_x << " " << pos2d.m_y;
 		return out;
 	}
+
+	friend std::ostream& operator == (std::ostream& out, const Position2D& pos2d)
+	{
+		out << pos2d.m_x << " " << pos2d.m_y;
+		return out;
+	}
 };

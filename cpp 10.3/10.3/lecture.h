@@ -9,13 +9,13 @@ private:
 	std::string m_name;
 
 	Teacher *teacher;
-	std::vector<Student*> students;
+	vector<Student*> students;
 
 	//Teacher *teacher;
-	//std::vector<Student*> students;
-
+	//vector<Student*> students;
+	0
 public:
-	Lecture(const std::string& name_in)
+	Lecture(const string& name_in = "No name")
 		:m_name(name_in)
 	{}
 
@@ -53,7 +53,7 @@ public:
 
 	void study()
 	{
-		std::cout << m_name << " study " << std::endl << std::endl;
+		cout << m_name << " study " << endl << endl;
 
 		//for (auto& element : students) //Note : 'auto element' doesn't works
 		//	element.setIntel(element.getIntel() + 1);
@@ -64,13 +64,13 @@ public:
 			element->setIntel(element->getIntel() + 1);*/
 	}
 
-	friend std::ostream& operator << (std::ostream& out, const Lecture& Lecture)
+	friend ostream& operator << (ostream& out, const Lecture& Lecture)
 	{
-		out << "Lecture name : " << Lecture.m_name << std::endl;
+		out << "Lecture name : " << Lecture.m_name << endl;
 
-		out << Lecture.teacher << std::endl;
+		out << Lecture.teacher << endl;
 		for (auto element : Lecture.students)
-			out << *element << std::endl;
+			out << *element << endl;
 
 		/*
 		out << *Lecture.teacher << std::endl;

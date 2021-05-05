@@ -12,13 +12,13 @@ int main()
 
 	Student *std1 = new Student("Jack jack", 0);
 	Student *std2 = new Student("Dash", 1);
-	Student *std3 = new Student("Violet", 2);
+	Student *std3 = new Student("Violet", 2); // student object 持失
 
 	Teacher *tech1 = new Teacher("Prof. Hong");
-	Teacher *tech2 = new Teacher("Prof. Good");
+	Teacher *tech2 = new Teacher("Prof. Good"); //teacher object 持失
 
 	//composition Relationship
-	Lecture lec1("Introduction to Computer Programming");
+	Lecture lec1("Introduction to Computer Programming"); // lecture object 持失
 	lec1.assignTeacher(tech1);
 	lec1.registerStudent(std1);
 	lec1.registerStudent(std2);

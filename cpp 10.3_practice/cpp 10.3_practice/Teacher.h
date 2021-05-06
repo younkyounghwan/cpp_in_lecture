@@ -9,9 +9,14 @@ private:
 	string teacher_name ;
 
 public:
-	Teacher(string name_in)
+	Teacher(string name_in = "No name")
 		:teacher_name(name_in)
 	{}
+
+	void setName(string name_in)
+	{
+		teacher_name = name_in;
+	}
 
 	friend ostream& operator << (ostream& out, const Teacher tec)
 	{

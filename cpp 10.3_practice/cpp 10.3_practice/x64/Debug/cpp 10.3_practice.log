@@ -1,3 +1,2 @@
 ﻿  main.cpp
-C:\Users\youn7\computer science\cpp\cpp 10.3_practice\cpp 10.3_practice\Lecture.h(15,2): error C2512: 'Teacher': 사용할 수 있는 적절한 기본 생성자가 없습니다.
-C:\Users\youn7\computer science\cpp\cpp 10.3_practice\cpp 10.3_practice\Teacher.h(6,7): message : 'Teacher' 선언을 참조하십시오.
+  cpp 10.3_practice.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 10.3_practice\x64\Debug\cpp 10.3_practice.exe

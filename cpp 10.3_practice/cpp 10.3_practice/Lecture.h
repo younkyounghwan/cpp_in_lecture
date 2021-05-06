@@ -38,4 +38,12 @@ public:
 
 	}
 
+	void study()
+	{
+		for (auto& e : vec_stu)
+		{
+			e.set_intel(e.get_intel() + 1);
+		}
+	}
+
 };

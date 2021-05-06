@@ -15,5 +15,7 @@ int main()
 	lec1.assign_Student(stu3);
 
 	cout << lec1 << endl;
+	lec1.study();
+	cout << lec1 << endl;
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 using namespace std;
 
 class Doctor; //foward declaration
@@ -21,6 +22,7 @@ public:
 	{
 		m_doctors.push_back(new_doctor);
 	}
+
 	void meetDoctors();
 
 

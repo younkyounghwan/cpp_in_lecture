@@ -1,3 +1,11 @@
-﻿  소스.cpp
-C:\Users\youn7\computer science\cpp\cpp 10.6\cpp 10.6\소스.cpp(43,22): warning C4101: 'int_arr' :참조되지 않은 지역 변수입니다.
-  cpp 10.6.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 10.6\Debug\cpp 10.6.exe
+﻿  main.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(422,1): error C2528: 'abstract declarator': 참조에 대한 포인터가 잘못되었습니다.
+C:\Users\youn7\computer science\cpp\cpp 10.6\cpp 10.6\main.cpp(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'std::array<int &,10>'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(423,1): error C2528: 'abstract declarator': 참조에 대한 포인터가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(495,1): error C2528: '_Unchecked_begin': 참조에 대한 포인터가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(499,1): error C2528: '_Unchecked_begin': 참조에 대한 포인터가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(503,1): error C2528: '_Unchecked_end': 참조에 대한 포인터가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(507,1): error C2528: '_Unchecked_end': 참조에 대한 포인터가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(572,1): error C2528: 'data': 참조에 대한 포인터가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(576,1): error C2528: 'data': 참조에 대한 포인터가 잘못되었습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\array(584,1): error C2234: '_Elems': 참조 배열이 잘못되었습니다.

@@ -1,4 +1,2 @@
 ﻿  소스.cpp
-C:\Users\youn7\computer science\cpp\cpp 11.4\cpp 11.4\소스.cpp(70,22): error C2664: 'C::C(int,double,char)': 인수 3을(를) 'const char [2]'에서 'char'(으)로 변환할 수 없습니다.
-C:\Users\youn7\computer science\cpp\cpp 11.4\cpp 11.4\소스.cpp(70,18): message : 이 변환이 가능한 컨텍스트가 없습니다.
-C:\Users\youn7\computer science\cpp\cpp 11.4\cpp 11.4\소스.cpp(56,2): message : 'C::C' 선언을 참조하십시오.
+  cpp 11.4.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 11.4\Debug\cpp 11.4.exe

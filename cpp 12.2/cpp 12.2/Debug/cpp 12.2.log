@@ -1,5 +1,2 @@
 ﻿  main.cpp
-C:\Users\youn7\computer science\cpp\cpp 12.2\cpp 12.2\main.cpp(32,4): warning C4101: 'a' :참조되지 않은 지역 변수입니다.
-C:\Users\youn7\computer science\cpp\cpp 12.2\cpp 12.2\main.cpp(34,4): warning C4101: 'c' :참조되지 않은 지역 변수입니다.
-C:\Users\youn7\computer science\cpp\cpp 12.2\cpp 12.2\main.cpp(35,4): warning C4101: 'd' :참조되지 않은 지역 변수입니다.
   cpp 12.2.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 12.2\Debug\cpp 12.2.exe

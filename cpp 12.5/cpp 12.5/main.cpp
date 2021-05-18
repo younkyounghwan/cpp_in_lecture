@@ -29,6 +29,7 @@ int main()
 	cin >> op;
 
 	// static binding (early binding)
+	
 	int result;
 	switch (op)
 	{
@@ -40,6 +41,7 @@ int main()
 	cout << result << endl;
 
 	//Dynamic binding (late binding)
+
 	int(*func_ptr)(int, int) = nullptr;
 	switch (op)
 	{
@@ -49,5 +51,6 @@ int main()
 	}
 
 	cout << func_ptr(x, y) << endl;
+
 	return 0;
 }

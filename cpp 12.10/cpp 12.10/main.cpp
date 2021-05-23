@@ -42,7 +42,6 @@ public:
 	}
 };
 
-
 int main()
 {
 	Derived1 d1;

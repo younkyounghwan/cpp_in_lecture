@@ -2,11 +2,12 @@
 #include <iostream>
 #include <assert.h>
 
+template<typename T>
 class MyArray
 {
 private:
-	int m_length;
-	int *m_data;
+	T m_length;
+	T* m_data;
 
 public:
 	MyArray()
@@ -33,7 +34,7 @@ public:
 		m_length = 0;
 	}
 
-	int& operator[](int index)
+	T& operator[](int index)
 	{
 		assert(index >= 0 && index < m_length);
 		return m_data[index];

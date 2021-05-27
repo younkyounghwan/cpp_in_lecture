@@ -18,7 +18,7 @@ public:
 
 	MyArray(int length)
 	{
-		m_data = new int[length];
+		m_data = new T[length];
 		m_length = length;
 	}
 
@@ -45,11 +45,15 @@ public:
 		return m_length;
 	}
 	
-	void print()
-	{
-		for (int i = 0; i < m_length; ++i)
-			std::cout << m_data[i] << " ";
-		std::cout << std::endl;
-	}
+	void print();
 
 };
+
+//void MyArray::print()
+//{
+//	for (int i = 0; i < m_length; ++i)
+//		std::cout << m_data[i] << " ";
+//	std::cout << std::endl;
+//}
+
+

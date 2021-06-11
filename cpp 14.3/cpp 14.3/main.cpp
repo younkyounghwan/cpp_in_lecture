@@ -28,7 +28,9 @@ private:
 public:
 	int& operator [] (const int& index)
 	{
-		if (index < 0 || index >= 5) throw - 1;
+		//if (index < 0 || index >= 5) throw - 1;
+		//if (index < 0 || index >= 5) throw Exception();
+		if (index < 0 || index >= 5) throw ArrayException();
 
 		return m_data[index];
 	}
@@ -46,11 +48,39 @@ void doSomething()
 	{
 		cerr << "Exception " << x << endl;
 	}
+	//catch (ArrayException& a)
+	//{
+	//	cout << "doSomething()" << endl;
+	//	a.report();
+	//	throw a; // rethrow
+	//}
+	catch (Exception& e)
+	{
+		cout << "doSomething()" << endl;
+		e.report();
+		//throw e; // 부모가 받음
+		throw;	   // 자식이 받음
+	}
+	
+	
 }
 
 int main()
 {
-	doSomething();
+	try
+	{
+		doSomething();
+	}
 
+	catch (ArrayException & e)
+	{
+		cout << "main()" << endl;
+		e.report();
+	}
+	catch (Exception& e)
+	{
+		cout << "main()" << endl;
+		e.report();
+	} 
 	return 0;
 }

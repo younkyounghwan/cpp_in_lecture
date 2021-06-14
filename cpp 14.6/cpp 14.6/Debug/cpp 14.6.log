@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\youn7\computer science\cpp\cpp 14.6\cpp 14.6\main.cpp(11,1): warning C4297: 'A::~A': 함수는 예외를 Throw하지 않도록 지정되었으나 예외를 Throw했습니다.
+C:\Users\youn7\computer science\cpp\cpp 14.6\cpp 14.6\main.cpp(11,1): message : 소멸자 또는 비할당자는 가능하면 암시적으로 throw되지 않는 예외 사양을 사용합니다.
+  cpp 14.6.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 14.6\Debug\cpp 14.6.exe

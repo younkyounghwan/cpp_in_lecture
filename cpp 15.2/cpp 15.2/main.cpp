@@ -1,10 +1,20 @@
 #include <iostream>
+#include <utility>
+#include <vector>
 
 using namespace std;
 
-int doSomething(int x)
+// memory를 가진다 -> L-value
+// memory를 가지지 못한다. -> R-value
+
+void doSomething(int& lref)
 {
-	return x;
+	cout << "L-value ref" << endl;
+}
+
+void doSomething(int &&ref)
+{
+	cout << "R-value ref" << endl;
 }
 
 int getResult()
@@ -44,8 +54,6 @@ int main()
 	// doSomething(cx);
 	doSomething(5);
 	doSomething(getResult());
-
-
 
 	return 0;
 }

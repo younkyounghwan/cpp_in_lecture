@@ -15,7 +15,7 @@ int main()
 {
 	using namespace std;
 	streambuf* orig_buf = cout.rdbuf();
-	cout.rdbuf(NULL); // disconnect cout from buffer
+	//cout.rdbuf(NULL); // disconnect cout from buffer
 
 	Timer timer;
 

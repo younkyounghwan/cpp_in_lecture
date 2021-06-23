@@ -25,7 +25,7 @@ int main()
 	}
 
 	cout.rdbuf(orig_buf);
-	cout << timer.elapsed() << endl;
+	timer.elapsed();
 
 	return 0;
 }

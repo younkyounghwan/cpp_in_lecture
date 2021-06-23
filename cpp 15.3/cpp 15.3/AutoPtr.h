@@ -49,36 +49,29 @@ public:
 	//	return *this;
 	//}
 
-	AutoPtr(const Auto& a) = delete;
-	AutoPtr& operator = (const AutoPtr& a) = delete;
+	/*AutoPtr(const Auto& a) = delete;
+	AutoPtr& operator = (const AutoPtr& a) = delete;*/
 
 	AutoPtr(AutoPtr&& a)
 		:m_ptr(a.m_ptr)
 	{
-		a.m_ptr = nullptr;
-		std::cout << "AutoPtr move  constructor " << std::endl;
-	}
+		a.m_ptr = nullptr; // really necessary?
 
-	AutoPtr& operator = (AutoPtr && a)
-	{
-	std::cout << "AutoPtr moveassignment " << std::endl;
-
-	if (&a == this)
-		return *this;
+		std::cout << "AutoPtr move constructor " << std::endl;
 	}
 
 	AutoPtr& operator=(AutoPtr&& a)
 	{
 		std::cout << "AutoPtr move assignment " << std::endl;
 
-		if (&a == this)
+		if (&a == this)  // prevent self-assignment
 			return *this;
 		
 		if (!m_ptr) delete m_ptr;
 
-		//shallow copy
+		// shallow copy
 		m_ptr = a.m_ptr;
-		a.m_ptr = nullptr;
+		a.m_ptr = nullptr; // really necessary?
 
 		return *this;
 	}

@@ -20,4 +20,5 @@ public:
 
 		std::cout << std::chrono::duration_cast<second_t>(end_time - start_time).count() << std::endl;
 	}
+
 };

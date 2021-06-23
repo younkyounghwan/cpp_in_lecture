@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// RAII : resource aacquisition is initialization
+// RAII : resource acquisition is initialization
 
 void doSomething()
 {

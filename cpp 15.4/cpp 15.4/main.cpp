@@ -1,4 +1,6 @@
 #include <iostream>
+#include "AutoPtr.h"
+#include "Resource.h"
 
 using namespace std;
 
@@ -9,7 +11,7 @@ int main()
 
 		cout << res1.m_ptr << endl;
 
-		AutoPtr<Resource> res2 = res1;
+		AutoPtr<Resource> res2 = std::move(res1);
 
 		cout << res1.m_ptr << endl;
 		cout << res2.m_ptr << endl;

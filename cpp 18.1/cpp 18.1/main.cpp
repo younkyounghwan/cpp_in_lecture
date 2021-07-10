@@ -5,16 +5,16 @@ using namespace std;
 
 int main()
 {
-	char buf[5];
+	char buf1[5];
 
-	cin >> setw(5) >> buf;
-	cout << buf << endl;
+	cin >> setw(5) >> buf1;
+	cout << buf1 << endl;
 
-	cin >> setw(5) >> buf;
-	cout << buf << endl;
+	cin >> setw(5) >> buf1;
+	cout << buf1 << endl;
 
-	cin >> setw(5) >> buf;
-	cout << buf << endl;
+	cin >> setw(5) >> buf1;
+	cout << buf1 << endl;
 
 	cout << endl;
 
@@ -32,6 +32,18 @@ int main()
 
 	while (cin.get(ch))
 		cout << ch; // ºóÄ­ÀÌ °í·ÁµÊ
+
+
+	cout << endl;
+
+
+	char buf[5];
+
+	cin.get(buf, 5);
+	cout << cin.gcount()<< " " << buf << endl;
+
+	cin.get(buf, 5);
+	cout << buf << endl;
 
 
 	return 0;

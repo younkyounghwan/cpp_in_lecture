@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\youn7\computer science\cpp\cpp 19.5\cpp 19.5\main.cpp(56,3): warning C4834: 'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중
+C:\Users\youn7\computer science\cpp\cpp 19.5\cpp 19.5\main.cpp(62,3): warning C4834: 'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중
+  cpp 19.5.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 19.5\x64\Debug\cpp 19.5.exe

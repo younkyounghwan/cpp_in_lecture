@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(40,23): error C2371: 'vx': 재정의. 기본 형식이 다릅니다.
+C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(36): message : 'vx' 선언을 참조하십시오.

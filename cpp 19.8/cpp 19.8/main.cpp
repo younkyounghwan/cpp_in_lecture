@@ -92,9 +92,51 @@ public:
         decltype(ihs * rhs) prod3 = ihs * rhs;
     }
 
-    void ex10()
+    template<typename T, typename S>
+    //decltype(ihs * rhs) func_ex8(T ihs, S rhs)
+    auto func_ex8(T ihs, S rhs) -> decltype(ihs* rhs)
     {
+        auto ihs* rhs;
+    }
 
+    void ex7_8()
+    {
+        func_ex7(1.0, 345);
+        func_ex8(1.2, 345);
+    }
+
+    struct S
+    {
+        int m_x;
+         
+        S()
+        {
+            m_x = 42;
+        }
+    };
+
+    void ex9()
+    {
+        int x;
+        const int cx = 42;
+        const int& crx = x;
+        const S* p = new S();
+
+        auto a = x;
+        auto b = cx;
+        auto c = crx;
+        auto d = p;
+        auto e = p->m_x;
+
+        typedef decltype(x) x_type;
+        typedef decltype(cx) cx_type;
+        typedef decltype(cx) crx_type;
+        typedef decltype(cx) m_x_type; // 'declared' type
+         
+        typedef decltype(cx) x_with_parens_type; // add references to L-values
+        typedef decltype(cx) cx_with_parens_type;
+        typedef decltype(cx) crx_with_parens_type;
+        typedef decltype(cx) m_x_with_parens_type;
     }
     void ex12()
     {

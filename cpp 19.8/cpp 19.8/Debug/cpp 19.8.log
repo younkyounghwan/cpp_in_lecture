@@ -1,7 +1,3 @@
 ﻿  main.cpp
-C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(99,17): error C2187: 구문 오류: 예기치 않은 '*'이(가) 있습니다.
-C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(99,17): message : 이 진단은 컴파일러 생성 함수 'unknown-type Examples::func_ex8(T,S)'에서 수행되었습니다.
-C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(40,23): error C2371: 'vx': 재정의. 기본 형식이 다릅니다.
-C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(36): message : 'vx' 선언을 참조하십시오.
-C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(167,14): error C2039: 'ex10': 'Examples'의 멤버가 아닙니다.
-C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(7): message : 'Examples' 선언을 참조하십시오.
+C:\Users\youn7\computer science\cpp\cpp 19.8\cpp 19.8\main.cpp(148): warning C4172: 지역 변수 또는 임시의 주소를 반환하고 있습니다.
+  cpp 19.8.vcxproj -> C:\Users\youn7\computer science\cpp\cpp 19.8\Debug\cpp 19.8.exe

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 class Examples
@@ -37,7 +36,7 @@ public:
 
         auto avx = vx;
 
-        volatile auto vx = 1024;
+        volatile auto vrx = 1024;
     }
 
     //template<class T>
@@ -64,7 +63,7 @@ public:
         //rc = 123; // error
     }
 
-    void ex5() // amendment // 개정 수정
+    void ex5() // amendment 
     {
         int i = 42;
         auto&& ri_1 = i; // L-value
@@ -80,23 +79,23 @@ public:
     }
 
     template<typename T, typename S>
-    void func_ex7(T ihs, S rhs)
+    void func_ex7(T lhs, S rhs)
     {
-        auto prod1 = ihs * rhs;
+        auto prod1 = lhs * rhs;
 
-        //typedef typeof(ihs* rhs) product_type;// pre-c++11 'some' compliers
-        typedef decltype(ihs* rhs) product_type;
+        //typedef typeof(lhs* rhs) product_type;// pre-c++11 'some' compliers
+        typedef decltype(lhs* rhs) product_type;
 
-        product_type prod2 = ihs * rhs;
+        product_type prod2 = lhs * rhs;
 
-        decltype(ihs * rhs) prod3 = ihs * rhs;
+        decltype(lhs * rhs) prod3 = lhs * rhs;
     }
 
     template<typename T, typename S>
-    //decltype(ihs * rhs) func_ex8(T ihs, S rhs)
-    auto func_ex8(T ihs, S rhs) -> decltype(ihs* rhs)
+    //decltype(lhs * rhs) func_ex8(T lhs, S rhs)
+    auto func_ex8(T lhs, S rhs) -> decltype(lhs* rhs)
     {
-        auto ihs* rhs;
+        return lhs * rhs;
     }
 
     void ex7_8()
@@ -108,7 +107,7 @@ public:
     struct S
     {
         int m_x;
-         
+
         S()
         {
             m_x = 42;
@@ -122,37 +121,148 @@ public:
         const int& crx = x;
         const S* p = new S();
 
-        auto a = x;
-        auto b = cx;
-        auto c = crx;
-        auto d = p;
+        auto a = x; // int
+        auto b = cx; // const int
+        auto c = crx; // const int&
+        auto d = p; // cynamic allocation
         auto e = p->m_x;
 
         typedef decltype(x) x_type;
         typedef decltype(cx) cx_type;
-        typedef decltype(cx) crx_type;
-        typedef decltype(cx) m_x_type; // 'declared' type
-         
-        typedef decltype(cx) x_with_parens_type; // add references to L-values
-        typedef decltype(cx) cx_with_parens_type;
-        typedef decltype(cx) crx_with_parens_type;
-        typedef decltype(cx) m_x_with_parens_type;
-    }
-    void ex12()
-    {
+        typedef decltype(crx) crx_type;
+        typedef decltype(p->m_x) m_x_type; // 'declared' type
 
+        typedef decltype((x)) x_with_parens_type; // add references to L-values
+        typedef decltype((cx)) cx_with_parens_type; // plus const
+        typedef decltype((crx)) crx_with_parens_type;
+        typedef decltype((p->m_x)) m_w_with_parens_type;
     }
+
+    const S foo()
+    {
+        return S();
+    }
+
+    const int& foobar()
+    {
+        return 123;
+    }
+
+    void ex10()
+    {
+        vector<int> vect = { 42, 43 };
+
+        auto a = foo();
+        typedef decltype(foo()) foo_type;
+
+        auto b = foobar();
+        typedef decltype(foobar()) foobar_type;
+
+        auto itr = vect.begin();
+        typedef decltype(vect.begin()) iterator_type;
+
+        auto first_element = vect[0];
+        decltype(vect[1]) second_element = vect[1]; // bracket return type is int
+    }
+
+    void ex11()
+    {
+        int x = 0;
+        int y = 0;
+        const int cx = 42;
+        const int cy = 43;
+        double d1 = 3.14;
+        double d2 = 2.72;
+
+        typedef decltype(x* y) prod_xy_type;
+        auto a = x * y;
+
+        typedef decltype(cx* cy) prod_cxcy_type; // result is prvalue; // pure R-value
+        auto b = cx * cy;
+
+        typedef decltype(d1 < d2 ? d1 : d2) cond_type; // result is L-value. & is added
+        auto c = d1 < d2 ? d1 : d2;
+
+        typedef decltype(x < d2 ? x : d2) cond_type_mixed; // promotion x to double
+        auto d = x < d2 ? x : d2;
+
+        // auto d = min(x, db1); // error when they are difference data types
+    }
+
+    template<typename T, typename S>
+    auto fpmin_wrong(T x, S y) -> decltype(x < y ? x : y)
+    {
+        return x < y ? x : y;
+    }
+
+    template<typename T, typename S>
+    auto fomin(T x, S y) ->
+        typename remove_reference<decltype(x < y ? x : y)>::type
+    {
+        return x < y ? x : y;
+    }
+
+        void ex12()
+    {
+        int i = 42;
+        double d = 45.1;
+        // auto a = min(i, d); // error : 'std::min' : no matching overload function found
+        auto a = min(static_cast<double>(i), d);
+
+        int& j = i;
+
+        // Not recommended
+        typedef decltype(fpmin_wrong(d, d)) fpmin_return_type1;
+        typedef decltype(fpmin_wrong(i, d)) fpmin_return_type2;
+        typedef decltype(fpmin_wrong(j, d)) fpmin_return_type2;
+    }
+
+    void ex13()
+    {
+        vector<int> vect; // vect is empty
+        typedef decltype(vect[0]) integer;
+    }
+
+    template<typename R>
+    class SomeFunctor
+    {
+    public:
+        typedef R result_type;
+
+        SomeFunctor()
+        {}
+
+        result_type operator() ()
+        {
+            return R();
+        }
+    };
+
     void ex14()
     {
-
+        SomeFunctor<int> func;
+        typedef decltype(func)::result_type integer; // nested type
     }
     void ex15()
     {
+        auto lambda = []() {return 42; };
+        decltype(lambda) lambda2(lambda);
+        decltype((lambda)) lambda3(lambda);
 
+        cout << "Lambda functions" << endl;
+        cout << &lambda << " " << &lambda2 << endl;
+        cout << &lambda << " " << &lambda3 << endl;
     }
+
     void ex16()
     {
+        //generic lambda
+        auto lambda = [](auto x, auto y)
+        {
+            return x + y;
+        };
 
+        cout << lambda(1.1, 2) << " " << lambda(3, 4) << " " << lambda(4.5, 2.2) << endl;
     }
 
 };
